@@ -43,7 +43,7 @@ public class Main {
         penguin.setId(103);
         penguin.setName("Penguin");
         penguin.setColour("black and white");
-        penguin.setType("big size bird");
+        penguin.setType("big size bird.");
         penguin.eat();
         penguin.drink();
         penguin.chirp();
