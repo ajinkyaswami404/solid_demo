@@ -1,8 +1,8 @@
 package com.solid.model;
 
-import com.solid.functions.Birds;
+import com.solid.functions.Creature;
 
-public abstract class Bird implements Birds {
+public class Bird implements Creature {
     private int id;
     private String name;
     private String colour;
@@ -17,15 +17,6 @@ public abstract class Bird implements Birds {
         this.colour = colour;
         this.type = type;
     }
-
-    @Override
-    abstract public void eat();
-
-    @Override
-    abstract public void drink();
-
-    @Override
-    abstract public void chirp();
 
     public int getId() {
         return id;
