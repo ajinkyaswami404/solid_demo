@@ -1,22 +1,19 @@
 package com.solid.entities;
 
-import com.solid.functions.Functionality;
+import com.solid.functions.Eatable;
+import com.solid.functions.Chirpable;
+import com.solid.functions.Drinkable;
+import com.solid.functions.Walkable;
+import com.solid.functions.Flyable;
 import com.solid.model.Bird;
 
-public class Parrot extends Bird {
-    private Functionality functionality;
+public class Parrot extends Bird implements Eatable, Chirpable,Drinkable, Walkable, Flyable {
 
-    private Functionality functionality1;
     public Parrot() {
     }
 
-    public Parrot(Functionality functionality) {
-        this.functionality=functionality;
-    }
-
-    public Parrot(Functionality functionality,Functionality functionality1) {
-        this.functionality=functionality;
-        this.functionality1=functionality1;
+    public Parrot(int id, String name, String colour, String type) {
+        super(id, name, colour, type);
     }
 
     @Override
@@ -34,13 +31,13 @@ public class Parrot extends Bird {
         System.out.println(this.getName()+" Bird can chirp");
     }
 
-    public void getFunctionality(){
-        if (functionality1==null){
-            functionality.function(this.getName());
-        }
-        else {
-            functionality.function(this.getName());
-            functionality1.function(this.getName());
-        }
+    @Override
+    public void fly() {
+        System.out.println(this.getName()+" Bird can fly");
+    }
+
+    @Override
+    public void walk() {
+        System.out.println(this.getName()+" Bird can walk");
     }
 }

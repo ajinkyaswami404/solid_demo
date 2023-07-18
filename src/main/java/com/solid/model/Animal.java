@@ -1,15 +1,16 @@
 package com.solid.model;
 
-public class Bird {
+public class Animal {
+
     private int id;
     private String name;
     private String colour;
     private String type;
 
-    public Bird() {
+    public Animal() {
     }
 
-    public Bird(int id, String name, String colour, String type) {
+    public Animal(int id, String name, String colour, String type) {
         this.id = id;
         this.name = name;
         this.colour = colour;
@@ -20,28 +21,28 @@ public class Bird {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getColour() {
         return colour;
     }
 
-    public void setColour(String colour) {
-        this.colour = colour;
-    }
-
     public String getType() {
         return type;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
     }
 
     public void setType(String type) {
@@ -50,7 +51,7 @@ public class Bird {
 
     @Override
     public String toString() {
-        return "Bird{" +
+        return "Animal{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", colour='" + colour + '\'' +
