@@ -1,8 +1,6 @@
 package com.solid.model;
 
-import com.solid.functions.Creature;
-
-public class Animal implements Creature {
+public class Animal {
 
     private int id;
     private String name;
